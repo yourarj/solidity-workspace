@@ -11,6 +11,6 @@
 ## Mapping
 - A `mapping` is essentialy a key value store for looking up data.
 - e.g.
-```sol
+```solidity
 mapping (address => uint) public accountBalance;
 ```

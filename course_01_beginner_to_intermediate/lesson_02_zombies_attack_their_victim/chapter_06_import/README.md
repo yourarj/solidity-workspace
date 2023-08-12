@@ -5,6 +5,6 @@
     1. Code reuse
     2. Code organization
 - eg.
-```sol
+```solidity
 import "location/file_to_be_imported.sol"
 ```

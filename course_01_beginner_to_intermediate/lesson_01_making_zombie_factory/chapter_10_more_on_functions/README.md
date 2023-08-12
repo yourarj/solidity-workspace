@@ -1,7 +1,7 @@
 ## More on functions in solidity
 
 - You can `return` from function
-```sol
+```solidity
     string greeting = "What's up dog";
     function sayHello() public returns (string memory){
         return greeting;
