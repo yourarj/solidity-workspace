@@ -5,7 +5,7 @@
     1. Code reuse
     2. Code Organization
 - eg.
-```sol
+```solidity
 contract Parent {
   
 }
