@@ -15,7 +15,7 @@
 - refers temporary variables which live till the lifetime of external function call to contract
 
 - eg. following is great explanation
-```sol
+```solidity
 contract SandwichFactory {
   struct Sandwich {
     string name;
