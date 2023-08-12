@@ -1,6 +1,7 @@
 # solidity-crypto-zombies
+**All credit goes to *https://cryptozombies.io/***
 
-<table><tr><td> <img src="resources/solidity-logo.jpg"/></td><td display="inline">The fastest way to learn and master cheatsheet solidity
+<table><tr><td> <img src="resources/solidity-logo.png"/></td><td display="inline">The fastest way to learn and master solidity
 
 **This is an attempt your expedite solidity learning**
 </td>
