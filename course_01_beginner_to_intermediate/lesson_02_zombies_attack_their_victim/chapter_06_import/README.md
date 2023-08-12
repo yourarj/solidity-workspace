@@ -1,4 +1,4 @@
-# 05: import
+# 06: import
 
 - usually in big solidity projects contracts are kept in different files and imported with `import`
 - We can utilize inheritance in solidity and achieve mutliple purposes
