@@ -1,4 +1,4 @@
-# 11: Handling mutliple return values
+# 12: Handling mutliple return values
 
 - A function can return *multiple values*
 - While destructuring the the returned value we can ignore other unwanted values.
