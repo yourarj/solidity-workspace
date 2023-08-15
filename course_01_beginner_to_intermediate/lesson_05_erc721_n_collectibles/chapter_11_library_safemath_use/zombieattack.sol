@@ -21,7 +21,7 @@ contract ZombieAttack is ZombieHelper {
     function attack(
         uint _zombieId,
         uint _targetId
-    ) external onlyOwnerOf(_zombieId) {
+    ) external ownerOf(_zombieId) {
         // fetch pointers to fighting zombies
         Zombie storage myZombie = zombies[_zombieId];
         Zombie storage enemyZombie = zombies[_targetId];
