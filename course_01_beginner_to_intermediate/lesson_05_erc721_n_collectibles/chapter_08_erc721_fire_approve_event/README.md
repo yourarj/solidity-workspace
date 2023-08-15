@@ -1,3 +1,3 @@
-# 07: Erc721 emit Approve event
+# 08: Erc721 emit Approve event
 
 emit Approve event after the `approve`.
