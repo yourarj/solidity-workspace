@@ -50,6 +50,15 @@ const HDWalletProvider = require('@truffle/hdwallet-provider');
 // loom provider
 const LoomTruffleProvider = require('loom-truffle-provider');
 
+const { readFileSync } = require('fs')
+const path = require('path')
+const { join } = require('path')
+
+function getLoomProviderWithPrivateKey(privateKeyPath, chainId, writeUrl, readUrl) {
+  const privateKey = readFileSync(privateKeyPath, 'utf-8');
+  return new LoomTruffleProvider(chainId, writeUrl, readUrl, privateKey);
+}
+
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
@@ -111,6 +120,17 @@ module.exports = {
         return new LoomTruffleProvider(chainId, writeUrl, readUrl, privateKey);
       },
       network_id: '9545242630824'
+    },
+    loom_basechain: {
+      provider: function () {
+        const chainId = 'default';
+        const writeUrl = 'http://basechain.dappchains.com/rpc';
+        const readUrl = 'http://basechain.dappchains.com/query';
+        const privateKeyPath = path.join(__dirname, 'mainnet_private_key');
+        const loomTruffleProvider = getLoomProviderWithPrivateKey(privateKeyPath, chainId, writeUrl, readUrl);
+        return loomTruffleProvider;
+      },
+      network_id: '*'
     },
     //
     // Useful for private networks
