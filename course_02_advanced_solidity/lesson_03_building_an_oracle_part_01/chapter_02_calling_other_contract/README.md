@@ -1,12 +1,2 @@
-Instead of 
-
-Instead of 
-```
-mkdir oracle && cd oracle && npx truffle init && cd ..
-```
-
-use 
-
-```
-mkdir oracle && cd oracle && npx truffle unbox && cd ..
-```
+- Create a OWNER only method to set oracle address
+- It makes updating oracle address convenient

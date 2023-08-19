@@ -1,12 +1,9 @@
-Instead of 
+# interface
 
-Instead of 
-```
-mkdir oracle && cd oracle && npx truffle init && cd ..
-```
+1. Interfaces are somehow similar to contracts, but they only declare functions. In other words, an interface `can't`:
 
-use 
+    - define state variables,
+    - constructors,
+    - or inherit from other contracts.
 
-```
-mkdir oracle && cd oracle && npx truffle unbox && cd ..
-```
+2. All functions in interface must be `external`
