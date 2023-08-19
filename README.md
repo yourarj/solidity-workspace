@@ -8,8 +8,9 @@
 </tr>
 </table>
 
-![Crypto Zombies](resources/crypto-zombies-logo.png)
+![Crypto Zombies](resources/logo.png)
 
-![Crypto Zombies](resources/zombie.png)
+![Crypto Zombies](resources/z-large.png)
+
 
 **disclaimer**: All logos and images owned by respective website. I don't claim any ownership over the art, logo or images used in this repo.
