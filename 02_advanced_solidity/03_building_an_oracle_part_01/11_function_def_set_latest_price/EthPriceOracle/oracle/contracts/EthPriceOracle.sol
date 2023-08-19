@@ -29,5 +29,9 @@ contract EthPriceOracle is Ownable {
             "This request is not in my pending list."
         );
         delete pendingRequests[_id];
+        CallerContractInterface callerContractInstance;
+        callerContractInstance = CallerContractInterface(_callerAddress);
+        callerContractInstance.callback(_ethPrice, _id);
+        emit SetLatestEthPriceEvent(_ethPrice, _callerAddress);
     }
 }
