@@ -81,6 +81,14 @@ contract EthPriceOracle is AccessControl {
         requestIdToResponse[_id].push(resp);
         uint numResponses = requestIdToResponse[_id].length;
         if (numResponses == THRESHOLD) {
+            uint256 computedEthPrice = 0;
+
+            for (uint f = 0; f < numResponses; f = f.add(1)) {
+                computedEthPrice = computedEthPrice.add(
+                    requestIdToResponse[_id][f].ethPrice
+                );
+            }
+            computedEthPrice = computedEthPrice.div(numResponses);
             delete pendingRequests[_id];
             CallerContractInterface callerContractInstance;
             callerContractInstance = CallerContractInterface(_callerAddress);
