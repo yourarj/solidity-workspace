@@ -17,12 +17,12 @@ contract ZombieOwnership is ZombieAttack, ERC721 {
     mapping(uint => address) zombieApprovals;
 
     // erc721 method balanceOf
-    function balanceOf(address _owner) external view returns (uint256) {
+    function balanceOf(address _owner) external view override returns (uint256) {
         return ownerZombieCount[_owner];
     }
 
     // erc721 method ownerOf
-    function ownerOf(uint256 _tokenId) external view returns (address) {
+    function ownerOf(uint256 _tokenId) external view override returns (address) {
         return zombieToOwner[_tokenId];
     }
 
@@ -37,7 +37,7 @@ contract ZombieOwnership is ZombieAttack, ERC721 {
         address _from,
         address _to,
         uint256 _tokenId
-    ) external payable {
+    ) external override payable {
         require(
             zombieToOwner[_tokenId] == msg.sender ||
                 zombieApprovals[_tokenId] == msg.sender
@@ -48,7 +48,7 @@ contract ZombieOwnership is ZombieAttack, ERC721 {
     function approve(
         address _approved,
         uint256 _tokenId
-    ) external payable onlyOwnerOf(_tokenId) {
+    ) external override payable onlyOwnerOf(_tokenId) {
         zombieApprovals[_tokenId] = _approved;
         emit Approval(msg.sender, _approved, _tokenId);
     }

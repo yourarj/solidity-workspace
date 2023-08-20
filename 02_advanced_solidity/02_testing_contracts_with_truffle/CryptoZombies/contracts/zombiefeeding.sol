@@ -6,12 +6,13 @@ pragma solidity 0.7.6;
 import "./zombiefactory.sol";
 
 // following is an interface to interact with CryptoKitty contract
-contract KittyInterface {
+abstract contract KittyInterface {
     function getKitty(
         uint256 _id
     )
         external
         view
+        virtual
         returns (
             bool isGestating,
             bool isReady,

@@ -45,7 +45,7 @@ contract ZombieFactory is Ownable {
     // createZombie function declaration
     function _createZombie(string memory _name, uint _dna) internal {
         // push zombie to array
-        uint id = zombies.push(
+        zombies.push(
             Zombie(
                 _name,
                 _dna,
@@ -54,7 +54,8 @@ contract ZombieFactory is Ownable {
                 0,
                 0
             )
-        ) - 1;
+        );
+        uint id = zombies.length - 1;
 
         // add zombie id to owner mapping
         zombieToOwner[id] = msg.sender;

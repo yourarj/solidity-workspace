@@ -12,8 +12,8 @@ for dir in $directories; do
         echo "----------------------------------------------------------------------"
         echo "[$index] Compiling contracts in $dir"
         # echo "Compiling contracts in $dir/truffle-config.js"
-        (cd "$dir" && npm install --quiet && truffle compile --quiet)
-        # (cd "$dir" && truffle compile --quiet)
+        # (cd "$dir" && npm install --silent && truffle compile --quiet)
+        (cd "$dir" && truffle compile --quiet)
         ((index++))
     fi
 done
