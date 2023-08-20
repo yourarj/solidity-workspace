@@ -5,7 +5,12 @@ We will discuss about installing smart contracts and prerequisites
 ## Generating Private Keys
 We need two private keys 
 1. for `caller` contract
+    
+    `node scripts/gen-key-for-loom.js caller/caller_private_key`
+
 2. for `oracle` contract
+    
+    `node scripts/gen-key-for-loom.js oracle/oracle_private_key`
 
 ## Confiugring Truffle
 We need to make changes to `truffle-config.js` for respective chain and network
