@@ -1,10 +1,12 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.7.6;
-
-import "openzeppelin-solidity/contracts/access/Ownable.sol";
+import "openzeppelin-solidity/contracts/access/AccessControl.sol";
 import "./CallerContractInterface.sol";
 
-contract EthPriceOracle is Ownable {
+contract EthPriceOracle is AccessControl {
+    bytes32 public constant ROLE_OWNER = keccak256("ROLE_OWNER");
+    bytes32 public constant ROLE_ORACLE = keccak256("ROLE_ORACLE");
+
     uint private randNonce = 0;
     uint private modulus = 1000;
     mapping(uint256 => bool) pendingRequests;
@@ -25,7 +27,7 @@ contract EthPriceOracle is Ownable {
         uint256 _ethPrice,
         address _callerAddress,
         uint256 _id
-    ) public onlyOwner {
+    ) public {
         require(
             pendingRequests[_id],
             "This request is not in my pending list."
