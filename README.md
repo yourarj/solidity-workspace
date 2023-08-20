@@ -1,6 +1,8 @@
-# solidity-crypto-zombies
+# solidity-workspace
 
-## solidity v0.7.6
+**Workspace where we deep dive in Solidity and it's framework ecosystem and tooling**
+
+## version covered: solidity v0.7.6
 
 ## Implemented
 - ✅ Openzeppelin Ownable
@@ -13,6 +15,8 @@
 </td>
 </tr>
 </table>
+
+## In addition to all other work this workspace contains SOLIDITY v0.7.6 compliant solutions to Crypto-Zombie Challenges
 
 ![Crypto Zombies](resources/logo.png)
 
