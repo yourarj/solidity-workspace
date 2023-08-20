@@ -12,6 +12,9 @@ contract EthPriceOracle is AccessControl {
     event GetLatestEthPriceEvent(address callerAddress, uint id);
     event SetLatestEthPriceEvent(uint256 ethPrice, address callerAddress);
 
+    constructor(address _owner) {
+        _setupRole(ROLE_OWNER, _owner);
+    }
 
     function getLatestEthPrice() public returns (uint256) {
         randNonce++;
