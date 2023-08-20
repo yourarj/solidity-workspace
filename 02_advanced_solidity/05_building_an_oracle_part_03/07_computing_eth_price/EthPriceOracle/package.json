@@ -1,0 +1,17 @@
+{
+  "name": "ethpriceoracle",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy:oracle": "cd oracle && npx truffle migrate --network extdev --reset -all && cd ..",
+    "deploy:caller": "cd caller && npx truffle migrate --network extdev --reset -all && cd ..",
+    "deploy:all": "npm run deploy:oracle && npm run deploy:caller",
+    "generate:keys": "node scripts/gen-key-for-loom.js caller/caller_private_key && node scripts/gen-key-for-loom.js oracle/oracle_private_key"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "loom-js": "^1.90.0"
+  }
+}
