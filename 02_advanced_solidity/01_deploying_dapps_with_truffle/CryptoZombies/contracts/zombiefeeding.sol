@@ -1,11 +1,12 @@
+// SPDX-License-Identifier: MIT
 // The Following pragma specifies which solidity compiler to use
-pragma solidity >=0.5.0 <0.6.0;
+pragma solidity 0.7.6;
 
 // import zombie factory
 import "./zombiefactory.sol";
 
 // following is an interface to interact with CryptoKitty contract
-contract KittyInterface {
+interface KittyInterface {
     function getKitty(
         uint256 _id
     )
@@ -44,12 +45,12 @@ contract ZombieFeeding is ZombieFactory {
     // trigger cooldown for specified zombie
     // here _zombie is reference to storage zombie
     function _triggerCooldown(Zombie storage _zombie) internal {
-        _zombie.readyTime = uint32(now + cooldownTime);
+        _zombie.readyTime = uint32(block.timestamp + cooldownTime);
     }
 
     // check if zombie pointed by reference is ready
     function _isReady(Zombie storage _zombie) internal view returns (bool) {
-        return (_zombie.readyTime <= now);
+        return (_zombie.readyTime <= block.timestamp);
     }
 
     // feedAndMultiply

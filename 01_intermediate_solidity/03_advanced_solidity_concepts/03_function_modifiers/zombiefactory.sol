@@ -1,5 +1,6 @@
+// SPDX-License-Identifier: MIT
 // The Following pragma specifies which solidity compiler to use
-pragma solidity >=0.5.0 <0.6.0;
+pragma solidity 0.7.6;
 
 // import ownable
 import "./ownable.sol";
