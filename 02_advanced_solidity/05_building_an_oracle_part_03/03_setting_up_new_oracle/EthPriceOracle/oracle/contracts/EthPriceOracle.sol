@@ -11,7 +11,15 @@ contract EthPriceOracle is AccessControl {
     mapping(uint256 => bool) pendingRequests;
     event GetLatestEthPriceEvent(address callerAddress, uint id);
     event SetLatestEthPriceEvent(uint256 ethPrice, address callerAddress);
+    event AddOracleEvent(address oracleAddress);
 
+    constructor(address _owner) {
+        _setupRole(ROLE_OWNER, _owner);
+    }
+
+    function addOracle(address _oracle) public {
+        require(hasRole(ROLE_OWNER, msg.sender), "Not an Owner");
+    }
 
     function getLatestEthPrice() public returns (uint256) {
         randNonce++;
