@@ -19,7 +19,7 @@ async function filterEvents(oracleContract, web3js) {
             console.error('Error on event', err)
             return
         }
-        await addRequestToQueue(event);
+        await addRequestToQueue(event)
     })
 
     oracleContract.events.SetLatestEthPriceEvent(async (err, event) => {
@@ -29,4 +29,11 @@ async function filterEvents(oracleContract, web3js) {
         }
         // Do something
     })
+}
+
+// add request to processing queue
+async function addRequestToQueue(event) {
+    const callerAddress = event.returnValues.callerAddress
+    const id = event.returnValues.id
+    pendingRequests.push({ callerAddress, id })
 }
