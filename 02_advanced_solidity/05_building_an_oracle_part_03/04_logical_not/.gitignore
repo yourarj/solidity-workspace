@@ -1,0 +1,3 @@
+**/node_modules
+**/build
+**/*_private_key
