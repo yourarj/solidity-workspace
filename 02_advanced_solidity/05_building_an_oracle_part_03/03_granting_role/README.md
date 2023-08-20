@@ -1,4 +1,4 @@
-# adding addNewOracle function
+# granting role
 
 define new method which will add newOracle
 
