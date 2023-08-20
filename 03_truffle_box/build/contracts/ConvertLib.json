@@ -2,7 +2,6 @@
   "contractName": "ConvertLib",
   "abi": [
     {
-      "constant": true,
       "inputs": [
         {
           "internalType": "uint256",
@@ -23,17 +22,19 @@
           "type": "uint256"
         }
       ],
-      "payable": false,
       "stateMutability": "pure",
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"conversionRate\",\"type\":\"uint256\"}],\"name\":\"convert\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"convertedAmount\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/ConvertLib.sol\":\"ConvertLib\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/ConvertLib.sol\":{\"keccak256\":\"0x10e20a172b452fece152e14fa48ea45568608d7e4a6b44b976a4fbce01a438a4\",\"urls\":[\"bzz-raw://5a95a5b9dff8d7efa9155ff2572da99910800bd2b19c383316a6ecc6bc000282\",\"dweb:/ipfs/QmcGD9ynJr3fzYTdNoNygWzDBZEedeX3GUqmaEAi4Jrp6o\"]}},\"version\":1}",
-  "bytecode": "0x60a3610024600b82828239805160001a607314601757fe5b30600052607381538281f3fe730000000000000000000000000000000000000000301460806040526004361060335760003560e01c806396e4ee3d146038575b600080fd5b605860048036036040811015604c57600080fd5b5080359060200135606a565b60408051918252519081900360200190f35b029056fea265627a7a723158205f22b0ee84837318942e010d0b1c8e07d21be21531627ea5556802eaaa72f7ad64736f6c63430005100032",
-  "deployedBytecode": "0x730000000000000000000000000000000000000000301460806040526004361060335760003560e01c806396e4ee3d146038575b600080fd5b605860048036036040811015604c57600080fd5b5080359060200135606a565b60408051918252519081900360200190f35b029056fea265627a7a723158205f22b0ee84837318942e010d0b1c8e07d21be21531627ea5556802eaaa72f7ad64736f6c63430005100032",
-  "sourceMap": "34:155:0:-;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
-  "deployedSourceMap": "34:155:0:-;;;;;;;;;;;;;;;;;;;;;;;;55:132;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;55:132:0;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;160:23;;55:132::o",
-  "source": "pragma solidity >=0.4.22 <0.7.0;\n\nlibrary ConvertLib{\n\tfunction convert(uint amount,uint conversionRate) public pure returns (uint convertedAmount)\n\t{\n\t\treturn amount * conversionRate;\n\t}\n}\n",
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"conversionRate\",\"type\":\"uint256\"}],\"name\":\"convert\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"convertedAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/ConvertLib.sol\":\"ConvertLib\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/ConvertLib.sol\":{\"keccak256\":\"0xd2295b960dcad10cdeaec692e6a330e0ce4a9186a4088fcdd96392c73e4cf778\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8ac183d6669e5cdbb3baa9b63155c4599c07b8bc480a5d8ae69e7b7093a73c47\",\"dweb:/ipfs/QmeDYCqP3vxv8VsZPmFYVQ2seAhH2H61SzTJW7dHivvC1E\"]}},\"version\":1}",
+  "bytecode": "0x60a4610024600b82828239805160001a607314601757fe5b30600052607381538281f3fe730000000000000000000000000000000000000000301460806040526004361060335760003560e01c806396e4ee3d146038575b600080fd5b605860048036036040811015604c57600080fd5b5080359060200135606a565b60408051918252519081900360200190f35b029056fea264697066735822122054a50b34f5020fd6105f624069aa1f990a91c3a69f3c3a819251da20ce0e700764736f6c63430007060033",
+  "deployedBytecode": "0x730000000000000000000000000000000000000000301460806040526004361060335760003560e01c806396e4ee3d146038575b600080fd5b605860048036036040811015604c57600080fd5b5080359060200135606a565b60408051918252519081900360200190f35b029056fea264697066735822122054a50b34f5020fd6105f624069aa1f990a91c3a69f3c3a819251da20ce0e700764736f6c63430007060033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "57:155:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "57:155:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;78:132;;;;;;;;;;;;;;;;-1:-1:-1;78:132:0;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;183:23;;78:132::o",
+  "source": "// SPDX-License-Identifier: MIT \npragma solidity 0.7.6;\n\nlibrary ConvertLib{\n\tfunction convert(uint amount,uint conversionRate) public pure returns (uint convertedAmount)\n\t{\n\t\treturn amount * conversionRate;\n\t}\n}\n",
   "sourcePath": "/home/hind/workspace/solidity/solidity-workspace/03_truffle_box/contracts/ConvertLib.sol",
   "ast": {
     "absolutePath": "project:/contracts/ConvertLib.sol",
@@ -43,27 +44,24 @@
       ]
     },
     "id": 17,
+    "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 1,
         "literals": [
           "solidity",
-          ">=",
-          "0.4",
-          ".22",
-          "<",
           "0.7",
-          ".0"
+          ".6"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:32:0"
+        "src": "33:22:0"
       },
       {
+        "abstract": false,
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "library",
-        "documentation": null,
         "fullyImplemented": true,
         "id": 16,
         "linearizedBaseContracts": [
@@ -76,11 +74,10 @@
             "body": {
               "id": 14,
               "nodeType": "Block",
-              "src": "149:38:0",
+              "src": "172:38:0",
               "statements": [
                 {
                   "expression": {
-                    "argumentTypes": null,
                     "commonType": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -91,13 +88,12 @@
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "argumentTypes": null,
                       "id": 10,
                       "name": "amount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 3,
-                      "src": "160:6:0",
+                      "src": "183:6:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -106,19 +102,18 @@
                     "nodeType": "BinaryOperation",
                     "operator": "*",
                     "rightExpression": {
-                      "argumentTypes": null,
                       "id": 11,
                       "name": "conversionRate",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 5,
-                      "src": "169:14:0",
+                      "src": "192:14:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "160:23:0",
+                    "src": "183:23:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -127,11 +122,11 @@
                   "functionReturnParameters": 9,
                   "id": 13,
                   "nodeType": "Return",
-                  "src": "153:30:0"
+                  "src": "176:30:0"
                 }
               ]
             },
-            "documentation": null,
+            "functionSelector": "96e4ee3d",
             "id": 15,
             "implemented": true,
             "kind": "function",
@@ -145,10 +140,11 @@
                 {
                   "constant": false,
                   "id": 3,
+                  "mutability": "mutable",
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
                   "scope": 15,
-                  "src": "72:11:0",
+                  "src": "95:11:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -159,22 +155,22 @@
                     "id": 2,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "72:4:0",
+                    "src": "95:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "value": null,
                   "visibility": "internal"
                 },
                 {
                   "constant": false,
                   "id": 5,
+                  "mutability": "mutable",
                   "name": "conversionRate",
                   "nodeType": "VariableDeclaration",
                   "scope": 15,
-                  "src": "84:19:0",
+                  "src": "107:19:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -185,17 +181,16 @@
                     "id": 4,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "84:4:0",
+                    "src": "107:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "value": null,
                   "visibility": "internal"
                 }
               ],
-              "src": "71:33:0"
+              "src": "94:33:0"
             },
             "returnParameters": {
               "id": 9,
@@ -204,10 +199,11 @@
                 {
                   "constant": false,
                   "id": 8,
+                  "mutability": "mutable",
                   "name": "convertedAmount",
                   "nodeType": "VariableDeclaration",
                   "scope": 15,
-                  "src": "126:20:0",
+                  "src": "149:20:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -218,30 +214,29 @@
                     "id": 7,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "126:4:0",
+                    "src": "149:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "value": null,
                   "visibility": "internal"
                 }
               ],
-              "src": "125:22:0"
+              "src": "148:22:0"
             },
             "scope": 16,
-            "src": "55:132:0",
+            "src": "78:132:0",
             "stateMutability": "pure",
-            "superFunction": null,
+            "virtual": false,
             "visibility": "public"
           }
         ],
         "scope": 17,
-        "src": "34:155:0"
+        "src": "57:155:0"
       }
     ],
-    "src": "0:190:0"
+    "src": "33:180:0"
   },
   "legacyAST": {
     "attributes": {
@@ -250,27 +245,25 @@
         "ConvertLib": [
           16
         ]
-      }
+      },
+      "license": "MIT"
     },
     "children": [
       {
         "attributes": {
           "literals": [
             "solidity",
-            ">=",
-            "0.4",
-            ".22",
-            "<",
             "0.7",
-            ".0"
+            ".6"
           ]
         },
         "id": 1,
         "name": "PragmaDirective",
-        "src": "0:32:0"
+        "src": "33:22:0"
       },
       {
         "attributes": {
+          "abstract": false,
           "baseContracts": [
             null
           ],
@@ -278,7 +271,6 @@
             null
           ],
           "contractKind": "library",
-          "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
             16
@@ -289,7 +281,7 @@
         "children": [
           {
             "attributes": {
-              "documentation": null,
+              "functionSelector": "96e4ee3d",
               "implemented": true,
               "isConstructor": false,
               "kind": "function",
@@ -299,7 +291,7 @@
               "name": "convert",
               "scope": 16,
               "stateMutability": "pure",
-              "superFunction": null,
+              "virtual": false,
               "visibility": "public"
             },
             "children": [
@@ -308,12 +300,12 @@
                   {
                     "attributes": {
                       "constant": false,
+                      "mutability": "mutable",
                       "name": "amount",
                       "scope": 15,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
-                      "value": null,
                       "visibility": "internal"
                     },
                     "children": [
@@ -324,22 +316,22 @@
                         },
                         "id": 2,
                         "name": "ElementaryTypeName",
-                        "src": "72:4:0"
+                        "src": "95:4:0"
                       }
                     ],
                     "id": 3,
                     "name": "VariableDeclaration",
-                    "src": "72:11:0"
+                    "src": "95:11:0"
                   },
                   {
                     "attributes": {
                       "constant": false,
+                      "mutability": "mutable",
                       "name": "conversionRate",
                       "scope": 15,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
-                      "value": null,
                       "visibility": "internal"
                     },
                     "children": [
@@ -350,29 +342,29 @@
                         },
                         "id": 4,
                         "name": "ElementaryTypeName",
-                        "src": "84:4:0"
+                        "src": "107:4:0"
                       }
                     ],
                     "id": 5,
                     "name": "VariableDeclaration",
-                    "src": "84:19:0"
+                    "src": "107:19:0"
                   }
                 ],
                 "id": 6,
                 "name": "ParameterList",
-                "src": "71:33:0"
+                "src": "94:33:0"
               },
               {
                 "children": [
                   {
                     "attributes": {
                       "constant": false,
+                      "mutability": "mutable",
                       "name": "convertedAmount",
                       "scope": 15,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
-                      "value": null,
                       "visibility": "internal"
                     },
                     "children": [
@@ -383,17 +375,17 @@
                         },
                         "id": 7,
                         "name": "ElementaryTypeName",
-                        "src": "126:4:0"
+                        "src": "149:4:0"
                       }
                     ],
                     "id": 8,
                     "name": "VariableDeclaration",
-                    "src": "126:20:0"
+                    "src": "149:20:0"
                   }
                 ],
                 "id": 9,
                 "name": "ParameterList",
-                "src": "125:22:0"
+                "src": "148:22:0"
               },
               {
                 "children": [
@@ -404,7 +396,6 @@
                     "children": [
                       {
                         "attributes": {
-                          "argumentTypes": null,
                           "commonType": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -419,7 +410,6 @@
                         "children": [
                           {
                             "attributes": {
-                              "argumentTypes": null,
                               "overloadedDeclarations": [
                                 null
                               ],
@@ -429,11 +419,10 @@
                             },
                             "id": 10,
                             "name": "Identifier",
-                            "src": "160:6:0"
+                            "src": "183:6:0"
                           },
                           {
                             "attributes": {
-                              "argumentTypes": null,
                               "overloadedDeclarations": [
                                 null
                               ],
@@ -443,49 +432,53 @@
                             },
                             "id": 11,
                             "name": "Identifier",
-                            "src": "169:14:0"
+                            "src": "192:14:0"
                           }
                         ],
                         "id": 12,
                         "name": "BinaryOperation",
-                        "src": "160:23:0"
+                        "src": "183:23:0"
                       }
                     ],
                     "id": 13,
                     "name": "Return",
-                    "src": "153:30:0"
+                    "src": "176:30:0"
                   }
                 ],
                 "id": 14,
                 "name": "Block",
-                "src": "149:38:0"
+                "src": "172:38:0"
               }
             ],
             "id": 15,
             "name": "FunctionDefinition",
-            "src": "55:132:0"
+            "src": "78:132:0"
           }
         ],
         "id": 16,
         "name": "ContractDefinition",
-        "src": "34:155:0"
+        "src": "57:155:0"
       }
     ],
     "id": 17,
     "name": "SourceUnit",
-    "src": "0:190:0"
+    "src": "33:180:0"
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+    "version": "0.7.6+commit.7338295f.Emscripten.clang"
   },
   "networks": {},
   "schemaVersion": "3.4.15",
-  "updatedAt": "2023-08-20T19:38:56.563Z",
+  "updatedAt": "2023-08-20T19:49:24.487Z",
   "devdoc": {
-    "methods": {}
+    "kind": "dev",
+    "methods": {},
+    "version": 1
   },
   "userdoc": {
-    "methods": {}
+    "kind": "user",
+    "methods": {},
+    "version": 1
   }
 }
