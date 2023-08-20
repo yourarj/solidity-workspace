@@ -1,18 +1,14 @@
-# Controlling access with Openzepplin Roles
+# Controlling access with Openzepplin AccessControl
 
 To give contract users different roles we can utilize `openzepplin`
 
-Openzepplin provides `Roles` library and type `Roles.Role`
-
-We can import it as `import "openzeppelin-solidity/contracts/access/Roles.sol";`
+We can import it as `import "openzeppelin-solidity/contracts/access/AccessControl.sol";`
 
 e.g.
 ```solidity
-import "openzeppelin-solidity/contracts/access/Roles.sol";
+import "openzeppelin-solidity/contracts/access/AccessControl.sol";
 
-contract RoleEnabledContract {
-  using Roles for Roles. Role
-
-  // do your stuff here
+contract EthPriceOracle is AccessControl {
+    bytes32 public constant ROLE_OWNER = keccak256("ROLE_OWNER");
+    bytes32 public constant ROLE_ORACLE = keccak256("ROLE_ORACLE");
 }
-```

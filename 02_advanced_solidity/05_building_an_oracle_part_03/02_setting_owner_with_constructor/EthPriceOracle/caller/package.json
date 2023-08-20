@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "axios": "^1.4.0",
+    "bn.js": "^5.2.1",
+    "loom-js": "^1.90.0",
+    "loom-truffle-provider": "^0.13.0",
+    "openzeppelin-solidity": "^3.4.2",
+    "truffle": "^5.11.2"
+  },
+  "name": "ethpriceoracle",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "mocha": "^10.1.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
