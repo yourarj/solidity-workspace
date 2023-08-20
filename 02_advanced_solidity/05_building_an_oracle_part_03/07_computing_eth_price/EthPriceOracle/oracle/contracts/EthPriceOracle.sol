@@ -12,6 +12,7 @@ contract EthPriceOracle is AccessControl {
     uint private randNonce = 0;
     uint private modulus = 1000;
     uint numOracles = 0;
+    uint private THRESHOLD = 0;
 
     mapping(uint256 => bool) pendingRequests;
 
@@ -26,6 +27,7 @@ contract EthPriceOracle is AccessControl {
     event SetLatestEthPriceEvent(uint256 ethPrice, address callerAddress);
     event AddOracleEvent(address oracleAddress);
     event RemoveOracleEvent(address oracleAddress);
+    event SetThresholdEvent(uint threshold);
 
     constructor(address _owner) {
         _setupRole(ROLE_OWNER, _owner);
@@ -47,6 +49,12 @@ contract EthPriceOracle is AccessControl {
         revokeRole(ROLE_ORACLE, _oracle);
         numOracles = numOracles.sub(1);
         emit RemoveOracleEvent(_oracle);
+    }
+
+    function setThreshold(uint _threshold) public {
+        require(hasRole(ROLE_OWNER, msg.sender), "Not an Owner");
+        THRESHOLD = _threshold;
+        emit SetThresholdEvent(THRESHOLD);
     }
 
     function getLatestEthPrice() public returns (uint256) {
@@ -71,11 +79,13 @@ contract EthPriceOracle is AccessControl {
         );
         Response memory resp = Response(msg.sender, _callerAddress, _ethPrice);
         requestIdToResponse[_id].push(resp);
-
-        delete pendingRequests[_id];
-        CallerContractInterface callerContractInstance;
-        callerContractInstance = CallerContractInterface(_callerAddress);
-        callerContractInstance.callback(_ethPrice, _id);
-        emit SetLatestEthPriceEvent(_ethPrice, _callerAddress);
+        uint numResponses = requestIdToResponse[_id].length;
+        if (numResponses == THRESHOLD) {
+            delete pendingRequests[_id];
+            CallerContractInterface callerContractInstance;
+            callerContractInstance = CallerContractInterface(_callerAddress);
+            callerContractInstance.callback(_ethPrice, _id);
+            emit SetLatestEthPriceEvent(_ethPrice, _callerAddress);
+        }
     }
 }
