@@ -2,6 +2,11 @@
 
 ## solidity v0.7.6
 
+## Implemented
+- ✅ Openzeppelin Ownable
+- ✅ Openzeppelin AccessControl
+- ✅ Openzeppelin SafeMath
+
 <table><tr><td> <img src="resources/solidity-logo.png"/></td><td display="inline">The fastest way to learn and master solidity
 
 **This is an attempt your expedite solidity learning**
