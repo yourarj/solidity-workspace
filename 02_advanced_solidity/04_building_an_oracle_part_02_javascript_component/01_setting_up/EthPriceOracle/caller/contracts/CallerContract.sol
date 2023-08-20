@@ -1,4 +1,5 @@
-pragma solidity 0.5.0;
+pragma solidity 0.7.6;
+
 import "./EthPriceOracleInterface.sol";
 import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 
